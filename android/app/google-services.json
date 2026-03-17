@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "364109033257",
+    "project_id": "belize-loan-verification",
+    "storage_bucket": "belize-loan-verification.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364109033257:android:53d1a72c61420f97ce5138",
+        "android_client_info": {
+          "package_name": "com.example.belizelogin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMpBujzPxVhn_jx8nKG2yRoA_EtqhZxGQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364109033257:android:904de760024dce38ce5138",
+        "android_client_info": {
+          "package_name": "com.example.heritageverification"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMpBujzPxVhn_jx8nKG2yRoA_EtqhZxGQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
