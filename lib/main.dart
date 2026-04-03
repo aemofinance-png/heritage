@@ -134,7 +134,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
           Positioned(
             top: 80,
-            right: 100,
+            right: 75,
             child: Image.asset('assets/images/heritage_logo.jpeg'),
           ),
           // Frosted card at bottom
@@ -144,7 +144,7 @@ class _MyHomePageState extends State<MyHomePage> {
               width: double.infinity,
               padding: const EdgeInsets.only(
                 top: 70,
-                bottom: 160,
+                bottom: 40,
                 left: 30,
                 right: 30,
               ),
@@ -163,7 +163,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     controller: _userIdController,
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.symmetric(
-                        vertical: 20,
+                        vertical: 18,
                         horizontal: 10,
                       ),
                       // labelText: 'User ID *',
@@ -188,7 +188,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     obscureText: _showPassword,
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.symmetric(
-                        vertical: 20,
+                        vertical: 18,
                         horizontal: 10,
                       ),
                       hintText: "Password *",
@@ -219,7 +219,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 12),
+                  const SizedBox(height: 8),
 
                   // Remember me + Forgot password
                   Row(
@@ -263,7 +263,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 8),
 
                   // Sign in button
                   SizedBox(
@@ -288,10 +288,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   Text(
-                    "Heritage bank will never ask customers to reset their password by",
+                    "Heritage bank will never ask customers to reset their",
                     style: TextStyle(color: Colors.white),
                   ),
-                  Text("clicking a URL", style: TextStyle(color: Colors.white)),
+                  Text(
+                    " password by clicking a URL",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ],
               ),
             ),
