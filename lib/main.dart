@@ -122,6 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Widget mobileLayout() {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
           // Background image

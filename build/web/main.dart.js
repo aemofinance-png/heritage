@@ -13223,7 +13223,7 @@ _.r=g
 _.w=h
 _.x=i},
 Ri:function Ri(){},
-au8(a){return new A.zn(a,null)},
+au8(a,b){return new A.zn(a,b,null)},
 au9(a){var s=a.lP(t.Np)
 if(s!=null)return s
 throw A.i(A.lh(A.d([A.iC("Scaffold.of() called with a context that does not contain a Scaffold."),A.bb("No Scaffold ancestor could be found starting from the context that was passed to Scaffold.of(). This usually happens when the context provided is from the same StatefulWidget as that whose build function actually creates the Scaffold widget being sought."),A.wH('There are several ways to avoid this problem. The simplest is to use a Builder to get a context that is "under" the Scaffold. For an example of this, please see the documentation for Scaffold.of():\n  https://api.flutter.dev/flutter/material/Scaffold/of.html'),A.wH("A more efficient solution is to split your build function into several widgets. This introduces a new context from which you can obtain the Scaffold. In this solution, you would have an outer widget that creates the Scaffold populated by instances of your new inner widgets, and then in these inner widgets you would use Scaffold.of().\nA less elegant but more expedient solution is assign a GlobalKey to the Scaffold, then use the key.currentState property to obtain the ScaffoldState rather than using the Scaffold.of() function."),a.ahq("The context used was")],t.p)))},
@@ -13326,8 +13326,9 @@ _.aT$=b
 _.c=_.a=null},
 afl:function afl(a,b){this.a=a
 this.b=b},
-zn:function zn(a,b){this.r=a
-this.a=b},
+zn:function zn(a,b,c){this.r=a
+this.dy=b
+this.a=c},
 a8n:function a8n(a){this.a=a},
 zr:function zr(a,b,c,d,e,f,g,h,i,j,k,l,m,n){var _=this
 _.d=a
@@ -50354,8 +50355,8 @@ s=this.c
 s.toString
 r=A.aoJ(s)
 if(r!=null&&r.f.length!==0&&A.aHd(this.gPk()))r.jo(0,B.CN,B.fz)},
-gor(){this.a.toString
-return!0},
+gor(){var s=this.a.dy
+return s!==!1},
 aC(){var s,r=this,q=null
 r.aS()
 s=r.c
@@ -50423,71 +50424,63 @@ uZ(a,b,c,d,e,f,g){return this.B_(a,b,c,!1,!1,d,e,f,g)},
 JZ(a,b,c,d,e,f,g,h){return this.B_(a,b,c,d,!1,e,f,g,h)},
 Kk(a,b){this.a.toString},
 Kj(a,b){this.a.toString},
-N(a){var s,r,q,p,o,n,m,l,k,j=this,i=null,h={},g=A.Z(a),f=a.ao(t.I).w,e=A.d([],t.s9),d=j.a.r
-j.gor()
-j.a0V(e,new A.Nk(new A.rc(d,j.f),!1,!1,i),B.i2,!0,!1,!1,!1,!1)
-if(j.fx){d=j.a
-d.toString
-s=j.fr
+N(a){var s,r,q,p,o,n,m,l,k=this,j=null,i={},h=A.Z(a),g=a.ao(t.I).w,f=A.d([],t.s9),e=k.a.r
+k.a0V(f,new A.Nk(new A.rc(e,k.f),!1,!1,j),B.i2,k.gor(),!1,!1,!1,!1)
+if(k.fx){e=k.a
+e.toString
+s=k.fr
 s===$&&A.a()
-j.uZ(e,d.afy(a,s),B.i4,!0,!0,!0,!0)}j.a.toString
-h.a=!1
-h.b=null
-if(j.ax!=null||j.at.length!==0){d=A.a1(j.at,t.l7)
-s=j.ax
-s=s==null?i:s.a
-if(s!=null)d.push(s)
-r=A.p1(B.lk,d,B.ac,B.cM)
-j.gor()
-j.uZ(e,r,B.i5,!0,!1,!1,!0)}if(j.Q!=null){q=A.auo(a)
-h.a=!1
-h.b=q.w
-d=j.Q
-d=d==null?i:d.a
-j.a.toString
-j.gor()
-j.JZ(e,d,B.dN,!1,!1,!1,!1,!0)}h.c=!1
-if(j.as!=null){a.ao(t.iB)
-d=A.Z(a)
-s=j.as
+k.uZ(f,e.afy(a,s),B.i4,!0,!0,!0,!0)}k.a.toString
+i.a=!1
+i.b=null
+if(k.ax!=null||k.at.length!==0){e=A.a1(k.at,t.l7)
+s=k.ax
+s=s==null?j:s.a
+if(s!=null)e.push(s)
+k.uZ(f,A.p1(B.lk,e,B.ac,B.cM),B.i5,k.gor(),!1,!1,!0)}if(k.Q!=null){r=A.auo(a)
+i.a=!1
+i.b=r.w
+e=k.Q
+e=e==null?j:e.a
+k.a.toString
+k.JZ(f,e,B.dN,!k.gor(),!1,!1,!1,!0)}i.c=!1
+if(k.as!=null){a.ao(t.iB)
+e=A.Z(a)
+s=k.as
 if(s!=null)s.a.gd8()
-p=d.R8.f
-h.c=(p==null?0:p)!==0
-d=j.as
-d=d==null?i:d.a
-j.a.toString
-j.gor()
-j.JZ(e,d,B.i6,!1,!0,!1,!1,!1)}j.a.toString
-d=j.CW
-d===$&&A.a()
-s=j.cx
+q=e.R8.f
+i.c=(q==null?0:q)!==0
+e=k.as
+e=e==null?j:e.a
+k.a.toString
+k.JZ(f,e,B.i6,!k.gor(),!0,!1,!1,!1)}k.a.toString
+e=k.CW
+e===$&&A.a()
+s=k.cx
 s===$&&A.a()
-o=j.dy
+p=k.dy
+p===$&&A.a()
+o=k.dx
 o===$&&A.a()
-n=j.dx
-n===$&&A.a()
-j.uZ(e,new A.C_(i,d,s,o,n,i),B.i7,!0,!0,!0,!0)
-m=g.w
-A:{d=i
-if(B.C===m||B.ay===m){j.a.toString
-d=new A.Pm(j.gPk(),i)
-break A}if(B.a6===m||B.b3===m||B.b4===m||B.b5===m)break A}j.uZ(e,d,B.i3,!0,!1,!1,!0)
-d=j.y
-s=d.y
-if(s==null?A.n(d).j("c3.T").a(s):s){j.Kj(e,f)
-j.Kk(e,f)}else{j.Kk(e,f)
-j.Kj(e,f)}d=t.w
-s=A.bA(a,B.bp,d).w
-j.gor()
-o=A.bA(a,B.i_,d).w
-l=s.r.x5(o.f.d)
-s=A.bA(a,B.VN,d).w
-j.gor()
-d=A.bA(a,B.i_,d).w
-d=d.f.d!==0?0:i
-k=s.w.x5(d)
-j.a.toString
-return new A.S8(!1,new A.zy(A.rl(B.a2,!0,i,A.jy(j.CW,new A.a8m(h,j,l,k,f,e),i),B.M,g.fx,0,i,i,i,i,i,B.eE),i),i)}}
+k.uZ(f,new A.C_(j,e,s,p,o,j),B.i7,!0,!0,!0,!0)
+n=h.w
+A:{e=j
+if(B.C===n||B.ay===n){k.a.toString
+e=new A.Pm(k.gPk(),j)
+break A}if(B.a6===n||B.b3===n||B.b4===n||B.b5===n)break A}k.uZ(f,e,B.i3,!0,!1,!1,!0)
+e=k.y
+s=e.y
+if(s==null?A.n(e).j("c3.T").a(s):s){k.Kj(f,g)
+k.Kk(f,g)}else{k.Kk(f,g)
+k.Kj(f,g)}e=t.w
+s=A.bA(a,B.bp,e).w
+p=k.gor()?A.bA(a,B.i_,e).w.f.d:0
+m=s.r.x5(p)
+p=A.bA(a,B.VN,e).w
+e=k.gor()&&A.bA(a,B.i_,e).w.f.d!==0?0:j
+l=p.w.x5(e)
+k.a.toString
+return new A.S8(!1,new A.zy(A.rl(B.a2,!0,j,A.jy(k.CW,new A.a8m(i,k,m,l,g,f),j),B.M,h.fx,0,j,j,j,j,j,B.eE),j),j)}}
 A.a8l.prototype={
 $0(){this.a.Q=this.b},
 $S:0}
@@ -80758,7 +80751,7 @@ return A.N($async$vQ,r)},
 N(a){if(A.bA(a,null,t.w).w.a.a<600)return this.alG()
 else return this.aht()},
 alG(){var s=this,r=null,q=A.aoI(0,A.a1c("assets/images/loginBackground.jpeg",B.lt)),p=A.a6B(r,A.a1c("assets/images/heritage_logo.jpeg",r),r,r,r,75,80,r),o=A.av(B.c.aI(127.5),B.l.B()>>>16&255,B.l.B()>>>8&255,B.l.B()&255),n=A.abf(s.f,A.IG(r,new A.eL(4,new A.bX(new A.ae(4,4),new A.ae(4,4),B.r,B.r),B.q),r,new A.ay(10,18,10,18),r,r,r,r,!0,r,r,r,r,r,r,B.k,!0,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"User ID *",r,r,r,r,r,r,r,r,r,!0,!0,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r),!1),m=s.e,l=t.E
-return A.au8(A.p1(B.ci,A.d([q,p,new A.en(B.lk,r,r,A.GS(A.vX(A.d([n,B.kE,A.abf(s.r,A.IG(r,new A.eL(4,new A.bX(new A.ae(4,4),new A.ae(4,4),B.r,B.r),B.f8),r,new A.ay(10,18,10,18),r,r,r,r,!0,r,r,r,r,r,r,B.k,!0,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"Password *",r,r,r,r,r,r,r,r,r,!0,!0,!1,r,r,r,r,r,r,r,r,A.aol(r,r,A.aok(m?B.ni:B.nh,r),r,r,new A.ahy(s),r,r,r),r,r,r,r,r),m),B.yt,A.rT(A.d([A.rT(A.d([B.Ts,A.ac5(A.aur(B.lQ,B.tL,new A.ahz(s),s.d),0.6)],l),B.aW),A.M3(B.Tq,new A.ahA(),r)],l),B.h3),B.yt,A.dL(A.ao0(B.Tp,s.gNA(),A.ao1(r,r,B.iF,r,r,r,r,r,r,r,r,r,B.iX,r,new A.cm(A.jB(8),B.q),r,r,r,r,r)),r,1/0),A.dt("Heritage bank will never ask customers to reset their",r,r,r,A.cX(r,r,B.k,r,r,r,r,r,r,r,r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r,r),A.dt(" password by clicking a URL",r,r,r,A.cX(r,r,B.k,r,r,r,r,r,r,r,r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r,r)],l),B.br,B.aW,B.dh),B.M,new A.eC(o,r,r,B.zQ,r,r,B.bq),r,r,B.DV,1/0),r)],l),B.ac,B.cM))},
+return A.au8(A.p1(B.ci,A.d([q,p,new A.en(B.lk,r,r,A.GS(A.vX(A.d([n,B.kE,A.abf(s.r,A.IG(r,new A.eL(4,new A.bX(new A.ae(4,4),new A.ae(4,4),B.r,B.r),B.f8),r,new A.ay(10,18,10,18),r,r,r,r,!0,r,r,r,r,r,r,B.k,!0,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"Password *",r,r,r,r,r,r,r,r,r,!0,!0,!1,r,r,r,r,r,r,r,r,A.aol(r,r,A.aok(m?B.ni:B.nh,r),r,r,new A.ahy(s),r,r,r),r,r,r,r,r),m),B.yt,A.rT(A.d([A.rT(A.d([B.Ts,A.ac5(A.aur(B.lQ,B.tL,new A.ahz(s),s.d),0.6)],l),B.aW),A.M3(B.Tq,new A.ahA(),r)],l),B.h3),B.yt,A.dL(A.ao0(B.Tp,s.gNA(),A.ao1(r,r,B.iF,r,r,r,r,r,r,r,r,r,B.iX,r,new A.cm(A.jB(8),B.q),r,r,r,r,r)),r,1/0),A.dt("Heritage bank will never ask customers to reset their",r,r,r,A.cX(r,r,B.k,r,r,r,r,r,r,r,r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r,r),A.dt(" password by clicking a URL",r,r,r,A.cX(r,r,B.k,r,r,r,r,r,r,r,r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r,r)],l),B.br,B.aW,B.dh),B.M,new A.eC(o,r,r,B.zQ,r,r,B.bq),r,r,B.DV,1/0),r)],l),B.ac,B.cM),!1)},
 aht(){var s,r,q,p,o,n,m,l,k=this,j=null,i=4282334782,h=A.aoI(0,A.a1c("assets/images/loginBackground.jpeg",B.lt)),g=A.av(B.c.aI(127.5),B.l.B()>>>16&255,B.l.B()>>>8&255,B.l.B()&255),f=t.E
 g=A.GS(A.vX(A.d([A.dt("Whatever you're working toward this year-",j,j,j,A.cX(j,j,B.k,j,j,j,j,j,j,j,j,15,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j),A.dt("home, business, savings-your goals matter",j,j,j,A.cX(j,j,B.k,j,j,j,j,j,j,j,j,15,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j),A.dL(j,20,j),A.dt("At Heritage Bank, we're here to support your",j,j,j,A.cX(j,j,B.k,j,j,j,j,j,j,j,j,15,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j),A.dt("plans with trusted service and steady",j,j,j,A.cX(j,j,B.k,j,j,j,j,j,j,j,j,15,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j),A.dt("guidance, every step of the way",j,j,j,A.cX(j,j,B.k,j,j,j,j,j,j,j,j,15,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j),A.dt("#HeritageBankBelize",j,j,j,A.cX(j,j,B.k,j,j,j,j,j,j,j,j,15,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j),A.dL(j,20,j),A.dL(A.ao0(B.Tu,new A.ahq(),A.ao1(j,j,B.iF,j,j,j,j,j,j,j,j,j,B.iX,j,new A.cm(A.jB(8),B.q),j,j,j,j,j)),j,130)],f),B.br,B.jY,B.jZ),B.M,new A.eC(g,j,j,j,j,j,B.bq),1/0,j,B.DU,400)
 s=A.dL(j,j,200)
@@ -80770,7 +80763,7 @@ o=A.abf(k.r,A.IG(j,new A.eL(4,new A.bX(new A.ae(4,4),new A.ae(4,4),B.r,B.r),B.f8
 n=A.rT(A.d([A.rT(A.d([B.Tr,A.ac5(A.aur(B.lQ,B.tL,new A.ahs(k),k.d),0.6)],f),B.aW),A.M3(B.Tw,new A.aht(),j)],f),B.h3)
 m=A.ao1(j,j,B.iF,j,j,j,j,j,j,j,j,j,B.iX,j,new A.cm(A.jB(8),B.q),j,j,j,j,j)
 l=k.w?A.dL(new A.vH(j,j,B.k,j,j,j,j),24,24):A.dt("Sign In",j,j,j,A.cX(j,j,B.k,j,j,j,j,j,j,j,j,16,j,j,B.bK,j,j,!0,j,j,j,j,j,j,j,j),j,j)
-return A.au8(A.p1(B.ci,A.d([h,A.rT(A.d([new A.en(B.ic,j,j,g,j),s,new A.en(B.ab,j,j,A.GS(new A.cy(B.mK,A.vX(A.d([r,q,p,B.kE,o,B.O1,n,B.kE,A.dL(A.ao0(l,k.gNA(),m),j,1/0),A.dt("Heritage bank will never ask customers to reset",j,j,j,A.cX(j,j,A.aT(i),j,j,j,j,j,j,j,j,j,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j),A.dt(" their password by clicking a URL",j,j,j,A.cX(j,j,A.aT(i),j,j,j,j,j,j,j,j,j,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j)],f),B.br,B.aW,B.dh),j),B.M,new A.eC(B.k,j,j,j,j,j,B.bq),470,j,j,380),j)],f),B.aW)],f),B.ac,B.cM))}}
+return A.au8(A.p1(B.ci,A.d([h,A.rT(A.d([new A.en(B.ic,j,j,g,j),s,new A.en(B.ab,j,j,A.GS(new A.cy(B.mK,A.vX(A.d([r,q,p,B.kE,o,B.O1,n,B.kE,A.dL(A.ao0(l,k.gNA(),m),j,1/0),A.dt("Heritage bank will never ask customers to reset",j,j,j,A.cX(j,j,A.aT(i),j,j,j,j,j,j,j,j,j,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j),A.dt(" their password by clicking a URL",j,j,j,A.cX(j,j,A.aT(i),j,j,j,j,j,j,j,j,j,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j)],f),B.br,B.aW,B.dh),j),B.M,new A.eC(B.k,j,j,j,j,j,B.bq),470,j,j,380),j)],f),B.aW)],f),B.ac,B.cM),j)}}
 A.ahl.prototype={
 $1(a){var s=null,r=A.jB(12),q=this.a,p=q?"Success":"Error"
 return new A.pY(A.dt(p,s,s,s,A.cX(s,s,q?B.Jd:B.Jc,s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s),A.dt(this.b,s,s,s,s,s,s),A.d([A.M3(B.Tv,new A.ahk(a),s)],t.E),B.k,new A.cm(r,B.q),s)},
